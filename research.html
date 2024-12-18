@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atsushi Kuribayashi</title>
+        <!-- CSS: Inside head tag -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- Devicon: Programming languages icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
+            <div class="container-fluid">
+                <div class="mx-4">
+                    <a class="navbar-brand" href="#">Atsushi Kuribayashi</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="career.html">Career</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="research.html">Research</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="project.html">Personal Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hobby.html">Hobby</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container my-4 ">
+            <div class="row justify-content-center">
+                <div class="col-lg mb-lg-4">
+                    <img src="image.jpg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="col-lg mx-2 align-self-center">
+                    <div class="my-3">
+                        <h1>
+                        Human-Machine Cooperation in Perception of Automated Driving System
+                        </h1>
+                        <p> 
+                        In automated driving, technical challenges exist in the perception, decision-making, and control stages, which are currently solved by control takeover by human drivers. Although the reliability of automated systems is improving, achieving 100% reliability in the perception phase is difficult because of the uncertainties in the driving environment. In addition, control takeover involves a high cognitive and physical load. Overconfidence due to lack of human understanding of the complex automated systems is also a problem. The more reliable the automated system is, the more difficult maintaining correct mental model becomes. To solve these challenges, I proposed “cooperative perception”. By intervening at the perception phase, rather than the control phase, the cognitive and physical load can be reduced. In addition, intervention in the internal state of the automated system prevents malfunctions from manifesting in vehicle control, as well as helping construction of correct mental models.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4 ">
+            <div class="row justify-content-center">
+                <div class="col-lg mb-lg-4">
+                    <img src="image.jpg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="col-lg mx-2 align-self-center">
+                    <div class="my-3">
+                        <h1>
+                        Prototype Demonstration with Mobile Vehicle and Autoware
+                        </h1>
+                        <p> 
+                        To verify the technical feasibility of cooperative perception, a prototype was implemented and tested in a real-world environment. As an automated vehicle, Autoware.auto, an existing automated driving software, was implemented on a small mobile vehicle. Cooperative perception was realized by implementing an HMI that displays obstacle recognition information from the automated driving system and allows the operator to manipulate the recognition information (selecting whether or not a collision risk exists for the target obstacle). By displaying recognition information on iPad, touch input was received from the operator. In a driving scenario where a pedestrian crosses in front of the vehicle, I showed that the vehicle control is more stable compared to control intervention that overrides the vehicle speed. The possibility of the cooperative perception to improve driving behavior of the automated driving system was demonstrated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4 ">
+            <div class="row justify-content-center">
+                <div class="col-lg mb-lg-4">
+                    <img src="image.jpg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="col-lg mx-2 align-self-center">
+                    <div class="my-3">
+                        <h1>
+                        Modeling Human Intervention Performance
+                        </h1>
+                        <p> 
+                        A subject experiment was conducted to investigate the relationship between the time given to the operator during the intervention, the reliability of the intervention (i.e., whether the operator can correctly judge the collision risk of obstacles, etc.), and the input method. Based on levels of situational awareness (SA), traffic light identification (Level 1 SA), pedestrian crossing intention (Level 2 SA), and pedestrian future trajectory (Level 3 SA) were set as perception tasks. The driving environment was created by extracting driving video and annotation information from the PIE data set. Experimental data obtained from 15 participants were used to model the relationship between the intervention time, perception task (required level of SA), and the intervention accuracy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4 ">
+            <div class="row justify-content-center">
+                <div class="col-lg mb-lg-4">
+                    <img src="image.jpg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="col-lg mx-2 align-self-center">
+                    <div class="my-3">
+                        <h1>
+                        Formulation of Human-Automation Coordination
+                        </h1>
+                        <p> 
+                        It is not practical for an operator to intervene in all of the large number of recognition tasks that an automated system processes. It is also not practical for the operator to constantly monitor the automated system and determine which recognition results to intervene in. Therefore, it is necessary for the automated system to determine when and which recognition results the operator should intervene, and to request intervention from the operator (request planning). The operator's intervention results must then be integrated with the automated system's recognition results and a high level of reliability must be achieved as a cooperative system as a whole (integration). Given the existence of uncertainty in traffic environment, I have successfully formulated these fundamentals of human-automation coordination (request planning and integration) into a POMDP (Partially Observed Markov Decision Process) model. The formulated algorithm was implemented in an online optimization algorithm (DESPOT) and automated driving was evaluated under various traffic condition using a traffic simulator (SUMO). It was statistically shown that the proposed method achieves higher safety, driving efficiency, and perception accuracy compared to the myopic target selection method. I also revealed the characteristics of cooperative recognition due to the uncertainty of traffic risk.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4 ">
+            <div class="row justify-content-center">
+                <div class="col-lg mx-2 align-self-center">
+                    <div class="my-3">
+                        <h1>
+                            Publication List
+                        </h1>
+                        <h2>
+                            Journal
+                        </h2>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “Recognition Assistance Interface for Human-Automation Cooperation in Pedestrian Risk Prediction,” SAE Int. J. of CAV 6(3):2023, doi:10.4271/12-06-03-0023.
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “Optimization of Intervention Request for Human-Machine Cooperative Recognition in Autonomous Driving,” Transactions of Society of Automotive Engineers of Japan: 2023, IJAE-2023-0170.R1
+                        </p>
+                        <p>
+                        K.Fujii, K.Takeuchi, A.Kuribayashi, N.Takeishi, Y.Kawahara, and K.Takeda."Estimating Counterfactual Treatment Outcomes Over Time in Complex Multiagent Scenarios", IEEE Transactions on Neural Networks and Learning Systems, (2023), doi: 10.1109/TNNLS.2024.3361166.
+                        </p> 
+                        <h2>
+                            International Conference
+                        </h2>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, and K.Takeda, “Recognition assistance interface for autonomous vehicles,” in Proceedings ofthe 5th International Symposium on Future Active Safety Technologytoward Zero Accidents (FAST-zero’19), Virginia, United States, 2018 (Oral)
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “A comparison of methods for sharing recognition information andinterventions to assist recognition in autonomous driving system,” in IEEE Intelligent Vehicles Symposium (IV), 2021 (Online)
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “A recognition phase Intervention Interface to Improve Naturalness of Autonomous Driving for Distracted Drivers,” in IEEE  Intelligent Transportation Systems Conferencem (ITSC), 2021 (Online)
+                        </p>
+                        <p>
+                        K.Fujii, K.Takeuchi, A.Kuribayashi, N.Takeishi, Y.Kawahara, and K.Takeda. “Estimating counterfactual treatment outcomes over time in multi-vehicle simulation.” In Proceedings of the 30th International Conference on Advances in Geographic Information Systems (SIGSPATIAL '22), 2022. (Oral)
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “Intervention Request Planning with Operator Capability Model for Human-Automation Cooperative Recognition,” in IEEE   International Conference on Mobility: Operations, Services and Technologies (MOST), Detroid, United States, 2023 (Oral)
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “Uncertainty Aware Task Allocation for Human-Automation Cooperative Recognition in Autonomous Driving Systems,” in IEEE Intelligent Vehicles Symposium (IV), Anchorage, United States 2023 (Poster)
+                        </p>
+                        <h2>
+                            Domestic Conference
+                        </h2>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, Y.Ishiguro, A.Carballo, and K.Takeda, “Shared Perception: Recognition Assistant Interface to Improve Driving Behaviour Quarity of Autonomous Driving,” Interaction2020, 2020. (Online)
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “Evaluation of Interface Design for Recognition Phase Human-Automation Cooperation in Automated Driving,” JSAE Annual Congress, 2022. (Oral)
+                        </p>
+                        <p>
+                        A.Kuribayashi, E.Takeuchi, A.Carballo, Y.Ishiguro, and K.Takeda, “Optimization of Intervention Request for Human-Machine Cooperative Recognition in Autonomous Driving,” JSAE Annual Congress, 2023. (Oral)
+                        </p>
+                        <h2>
+                            Award
+                        </h2>
+                        <p>
+                        The 24th Tokai Area Mid-term Presentation of Master's Thesis for Sound Related Laboratories, Grand Prize, 2020.
+                        </p>
+                        <p>
+                        Outstanding Fellow of Interdisciplinary Frontier Fellow (2023-2024)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript: Above <body>  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
