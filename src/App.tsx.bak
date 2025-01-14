@@ -1,5 +1,5 @@
 import React from 'react';
-import testimage from './myjavelin2.png';
+import testimage from './images/javelin.png';
 import logo from './logo.svg';
 import './App.css';
 

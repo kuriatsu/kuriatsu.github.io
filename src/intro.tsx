@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid2';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import Typography from '@mui/material/Typography';
-import testimage from './myjavelin2.png';
+import me from './images/me.jpg';
 import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -16,14 +16,10 @@ function Intro() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="xl">
-        <Box sx={{p:3, flexgrow: 1 }} >
-          <Grid container spacing={2} alignItems="center">
+        <Box sx={{p:3, flexgrow: 1, mt:5}} >
+          <Grid container spacing={3} alignItems="center">
             <Grid size={6}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={testimage} fluid />
-                </Carousel.Item>
-              </Carousel>
+               <Image src={me} fluid roundedCircle/>
             </Grid>
             <Grid size={6}>
               <Typography variant="h3">

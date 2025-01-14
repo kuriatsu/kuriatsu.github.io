@@ -7,6 +7,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+
+import Grid from '@mui/material/Grid2';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -68,7 +70,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{bgcolor:"#282c34"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -79,8 +81,8 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
               fontWeight: 700,
+              fontSize: 24,
               letterSpacing: '.05rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -113,8 +115,8 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
               fontWeight: 700,
+              fontSize: 24,
               letterSpacing: '.05rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -137,14 +139,14 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Move to GitHub">
               <IconButton href="https://github.com/kuriatsu" sx={{ p: 0 }}>
-                <GitHubIcon/>
+                <GitHubIcon sx={{color:"white"}}/>
               </IconButton>
             </Tooltip>
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, ml:2}}>
             <Tooltip title="Move to LinkedIn">
               <IconButton href="https://www.linkedin.com/in/kuriatsu" sx={{ p: 0 }}>
-                <LinkedInIcon/>
+                <LinkedInIcon sx={{color:"white"}}/>
               </IconButton>
             </Tooltip>
           </Box>
@@ -160,12 +162,25 @@ function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={
+          <Box sx={{flexGrow:1}}>
           <React.Fragment>
             <Intro.Intro />
-            <Timeline.Academic />
-            <Timeline.Work />
-            <Intro.Contact />
+            <Grid container spacing={2}>
+              <Grid size={{xs:12, md:6}} sx={{p:5}}>
+              <Timeline.Academic />
+              </Grid>
+              <Grid size={{xs:12, md:6}} sx={{p:5}}>
+              <Timeline.Work />
+              </Grid>
+            </Grid>
+            <Box sx={{width:600,  display: {xs:'flex', md: 'none', lg: 'flex'}}}>
+              <Intro.Contact />
+            </Box>
+            <Box sx={{mx:"auto", width:600, display: {xs:'none', md: 'flex', lg: 'none'}}} >
+              <Intro.Contact />
+            </Box>
           </React.Fragment>
+          </Box>
         }/>
         <Route path="/research" element={
           <React.Fragment>

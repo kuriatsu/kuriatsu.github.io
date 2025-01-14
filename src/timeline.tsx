@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineItem, {timelineItemClasses} from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
@@ -68,10 +68,9 @@ function Content(duration: string, title: string, description: string) {
 function Academic() {
 
   return (
-  <Container maxWidth="md">
-    <Box sx={{p:3, flexgrow: 2 }} >
+    <Box justifyContent="center" alignItems="center">
     <Typography variant="h4"> Academic </Typography>
-    <Timeline>
+    <Timeline sx={{ [`& .${timelineItemClasses.root}:before`]: { flex: 0, padding:0 },}}>
       {Content(
         "1 Apr 2021 - 25 Mar 2025",
         "Ph.D. Candidate at Nagoya University",
@@ -94,17 +93,15 @@ function Academic() {
       )}
     </Timeline>
     </Box>
-   </Container>
   );
 }
 
 function Work() {
 
   return (
-  <Container maxWidth="md">
-    <Box sx={{p:3, flexgrow: 2 }} >
+    <Box justifyContent="center" justifyItems="center">
     <Typography variant="h4"> Work </Typography>
-    <Timeline>
+    <Timeline sx={{ [`& .${timelineItemClasses.root}:before`]: { flex: 0, padding:0 },}}>
       {Content(
         "1 Dec 2024 - Now",
         "MapIV",
@@ -122,7 +119,6 @@ function Work() {
       )}
     </Timeline>
     </Box>
-  </Container>
   );
 }
 export default {Academic, Work}
