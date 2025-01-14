@@ -3,6 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid2';
+import Stack from '@mui/material/Stack';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import Typography from '@mui/material/Typography';
@@ -16,7 +17,7 @@ function Intro() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="xl">
-        <Box sx={{p:3, flexgrow: 1, mt:5}} >
+        <Box sx={{p:3, flexgrow: 1, mt:5, display:{xs:"none", md:"flex"}}} >
           <Grid container spacing={3} alignItems="center">
             <Grid size={6}>
                <Image src={me} fluid roundedCircle/>
@@ -31,6 +32,19 @@ function Intro() {
               </Typography>
             </Grid>
           </Grid>
+        </Box>
+
+        <Box sx={{p:3, flexgrow: 1, mt:5, display:{xs:"flex", md:"none"}}} >
+          <Stack spacing={3} alignItems="center">
+            <Image src={me} fluid roundedCircle/>
+            <Typography variant="h3">
+              Hi, I'm Atsushi.
+            </Typography>
+            <div className="mt-3"/>
+            <Typography variant="body1">
+                I’m going to receive a Ph.D. in Informatics in March of this year. My research was on human-machine cooperation in the perception phase of automated driving. I have conducted prototype implementation and validation, research on human behavior modeling, user interface design, and human-machine cooperation mechanisms. Through practical experiences in the automated driving industry, I have an understanding of automated driving systems and related technologies. I have a huge passion for giving shape to new ideas.
+              </Typography>
+          </Stack>
         </Box>
       </Container>
     </React.Fragment>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -34,7 +34,7 @@ import Work from './work';
 import Project from './project';
 
 const pages = ['Home', 'Work', 'Research', 'Personal Project'];
-const page_links = ['/', '/work', '/research', '/project'];
+const page_links = ['/', '#/work', '#/research', '#/project'];
 
 function ResponsiveAppBar() {
 
