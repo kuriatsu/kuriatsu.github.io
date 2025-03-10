@@ -27,7 +27,7 @@ function Skill() {
   return (
   <Container maxWidth="lg">
     <Box>
-      <Typography variant="h3" align="center" sx={{mb:2}}> Skill </Typography>
+      <Typography variant="h3" align="center" sx={{mt:10, mb:3}}> Skill </Typography>
     </Box>
     <Grid container sx={{justifyContent: "center", alignItems:"stretch"}}>
       <Grid>
@@ -192,4 +192,4 @@ function Skill() {
   );
 }
 
-export default {Skill}
+export default Skill

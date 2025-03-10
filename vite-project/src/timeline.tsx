@@ -18,7 +18,7 @@ function Academic() {
   return (
   <Container maxWidth="lg">
     <Box>
-      <Typography variant="h3" align="center" sx={{mb:2}}> Academic </Typography>
+      <Typography variant="h3" align="center" sx={{mt:10, mb:3}}> Academic </Typography>
     </Box>
     <Card sx={{display: 'flex', mb:2}}>
       <CardActionArea href='#/phd'>
@@ -101,7 +101,7 @@ function Work() {
   return (
   <Container maxWidth="lg">
     <Box>
-      <Typography variant="h3" align="center" sx={{mt:5, mb:2}}> Work </Typography>
+      <Typography variant="h3" align="center" sx={{mt:10, mb:3}}> Work </Typography>
     </Box>
 
     <Card sx={{display: 'flex', mb:2}}>

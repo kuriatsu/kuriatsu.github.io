@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 
 import * as React from 'react';
 import { HashRouter as Router, Route, Link, Routes } from 'react-router-dom';
@@ -21,6 +20,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import './App.css';
 
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -34,15 +34,19 @@ import MailIcon from '@mui/icons-material/Mail';
 
 import Intro from './intro';
 import Timeline from './timeline';
-import Research from './research';
+import PhD from './phd';
 import UPenn from './upenn';
-import Work from './work';
+import Master from './master';
+import MAPIV from './mapiv';
+import BRAINIV from './brainiv';
+import QTA from './qta';
+import Publications from './publications';
 import Skill from './skill';
 import Project from './project';
 import Hobby from './hobby';
 
-const pages = ['Home', 'Publication', 'Project'];
-const page_links = ['/', '#/publication', '#/project'];
+const pages = ['Home', 'Publication', 'Project', 'Hobby'];
+const page_links = ['/', '#/publication', '#/project', '#/hobby'];
 
 function ResponsiveAppBar() {
 
@@ -78,7 +82,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{bgcolor:"#282c34"}}>
+    <AppBar sx={{bgcolor:"#282c34"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -170,19 +174,19 @@ function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={
-          <Box sx={{flexGrow:1}}>
+          <Box sx={{mt:10}}>
           <React.Fragment>
             <Intro.Intro />
             <Timeline.Academic />
             <Timeline.Work />
-            <Skill.Skill />
+            <Skill />
             <Intro.Contact />
           </React.Fragment>
           </Box>
         }/>
         <Route path="/publication" element={
           <React.Fragment>
-            <Research.Publication />
+            <Publications />
           </React.Fragment>
         }/>
         <Route path="/project" element={
@@ -197,7 +201,7 @@ function App() {
         }/>
         <Route path="/phd" element={
           <React.Fragment>
-            <Research.PhD />
+            <PhD />
           </React.Fragment>
         }/>
         <Route path="/upenn" element={
@@ -207,22 +211,22 @@ function App() {
         }/>
         <Route path="/master" element={
           <React.Fragment>
-            <Research.Master />
+            <Master />
           </React.Fragment>
         }/>
         <Route path="/mapiv" element={
           <React.Fragment>
-            <Work.MapIV />
+            <MAPIV />
           </React.Fragment>
         }/>
         <Route path="/qta" element={
           <React.Fragment>
-            <Work.QTA />
+            <QTA />
           </React.Fragment>
         }/>
         <Route path="/brainiv" element={
           <React.Fragment>
-            <Work.BrainIV />
+            <BRAINIV />
           </React.Fragment>
         }/>
       </Routes>

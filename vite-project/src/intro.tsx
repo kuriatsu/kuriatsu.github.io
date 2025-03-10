@@ -67,16 +67,12 @@ function Contact() {
               sx={{display:{xs:"flex", md:"none"}}}>
             <Grid>
               <PlaceIcon/>
-            </Grid>
-            <Grid>
               <Typography variant="body1" align="center">
                 Nagoya, Aichi, Japan
               </Typography>
             </Grid>
             <Grid>
               <EmailIcon/> 
-            </Grid>
-            <Grid>
               <Typography variant="body1" align="center">
                 kuriatsubayashi712@gmail.com
               </Typography>
@@ -86,8 +82,6 @@ function Contact() {
             </Grid>
             <Grid>
               <PhoneIcon/>
-            </Grid>
-            <Grid>
               <Typography variant="body1" align="center">
                 +81-80-2565-4481
               </Typography>
@@ -100,33 +94,27 @@ function Contact() {
               sx={{display:{xs:"none", md:"flex"}}}>
           <Stack direction="row">
             <Grid sx={{ml:2, mr:1}}>
-              <PlaceIcon/>
-            </Grid>
-            <Grid>
-              <Typography variant="body1" align="left">
+              <PlaceIcon fontSize="large"/>
+              <Typography variant="body1" align="center">
                 Nagoya, Aichi, Japan
               </Typography>
             </Grid>
           </Stack>
           <Stack direction="row">
             <Grid sx={{ml:2, mr:1}}>
-              <EmailIcon/> 
-            </Grid>
-            <Grid>
-              <Typography variant="body1" align="left">
+              <EmailIcon fontSize="large"/> 
+              <Typography variant="body1" align="center">
                 kuriatsubayashi712@gmail.com
               </Typography>
-              <Typography variant="body1" align="left">
+              <Typography variant="body1" align="center">
                 kuribayashi.atsushi@g.sp.m.is.nagoya-u.ac.jp
               </Typography>
             </Grid>
           </Stack>
           <Stack direction="row">
             <Grid sx={{ml:2, mr:1}}>
-              <PhoneIcon/>
-            </Grid>
-            <Grid>
-              <Typography variant="body1" align="left">
+              <PhoneIcon fontSize="large"/>
+              <Typography variant="body1" align="center">
                 +81-80-2565-4481
               </Typography>
             </Grid>
