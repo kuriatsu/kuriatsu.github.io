@@ -29,11 +29,11 @@ function UPenn() {
           </Typography>
         </Box>
         <Stack>
-        <Typography variant="body1" align="left">
+        <Typography variant="h6" align="left">
           mLab developed F1Tenth and is organizing automated driving races at several international conferences.
           F1Tenth is a 1/10 scale vehicle for education on automated driving and robotics, and for validation of algorithms developed in research.
         </Typography>
-        <Grid container direction="row" columnSpacing={2} sx={{mt:2}}>
+        <Grid container direction="row" columnSpacing={2} sx={{mt:5}}>
           <Grid size={6}>
             <Box component="img" src={f1_tenth1} sx={{width:"99%", borderRadius:3}}/>
             <Typography variant="body1" align="center" p={2}>
@@ -48,26 +48,32 @@ function UPenn() {
           </Grid>
         </Grid>
 
-        <Typography variant="body1" align="left">
+        <Typography variant="h6" align="left" sx={{mt:3}}>
           MLab focuses on control theory and game theory. They actively collaborate with other universities and researchers, and various researchers and students come in and out of the lab every day, leading to lively discussions (which makes security issues). Professor Rahul is very open and frank. He often told us “Proceed step by step”. His teaching principle is fundamental, but it is a perspective that many students tend to overlook. I have learned a lot from him, from the fundamentals to advanced aspects of research. mLab students are very talented, at both academical and personality, and I love them. I had gained a lot of inspiration and lessons from them. Philadelphia is rich in both arts, sports, and culture, and I spent my holidays with lab mates going to the center of town to chill. I am extremely grateful to them for their warm welcome to me.
           I worked on automated driving with imitation learning. I attempted to control the quality and performance of the learning model by controlling the training data with a prediction framework called “conformal prediction". I regret that my stay was only three months, so I ended up doing only basic experiments.
         </Typography>
         <Box>
-          <Box component="img" src={mlab} sx={{width:"80%", mt:2, borderRadius:3}}/>
+          <Box component="img" src={mlab} sx={{width:"80%", mt:5, borderRadius:3}}/>
           <Typography variant="body1" align="center" p={2}>
             mLab members 
           </Typography>
         </Box>
 
-        <Typography variant="body1" align="left">
-          After my study at Philly, I stopped in San Francisco and enjoyed the beautiful city and the pleasant June weather. San Francisco is a mecca for fixed gear, and I was happy just to hang around the city I adored so much.
+        <Typography variant="h6" align="left" sx={{mt:5}}>
+          After leaving Philly, I stopped in San Francisco and enjoyed the beautiful city and the pleasant June weather. San Francisco is a mecca for fixed gear, and I was happy just to hang around the city I adored so much.
         </Typography>
-        <Grid container direction="row" columnSpacing={2} sx={{mt:2}}>
+        <Grid container direction="row" columnSpacing={2} sx={{mt:5}}>
           <Grid size={6}>
             <Box component="img" src={sf_landscape} sx={{width:"99%", borderRadius:3}}/>
+            <Typography variant="body1" align="center" p={2}>
+              Twin Peaks
+            </Typography>
           </Grid>
           <Grid size={6}>
             <Box component="img" src={sf_goldenbridge} sx={{width:"99%", borderRadius:3}}/>
+            <Typography variant="body1" align="center" p={2}>
+              Golden Gate Bridge
+            </Typography>
           </Grid>
         </Grid>
         </Stack>

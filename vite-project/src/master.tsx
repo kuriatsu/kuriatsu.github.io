@@ -5,45 +5,85 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
-import Image from 'react-bootstrap/Image';
-import testimage from './images/javelin.png';
+import Paper from '@mui/material/Paper';
+import Divider from '@mui/material/Divider';
+import {useState, useEffect} from "react";
 
-import map_iv from './images/mapIV.jpg'
-import map_iv_map from './images/mapIV_vectormap.png'
+import logo from './images/nagoya-univ_logo.png';
+import lab_member from './images/takedalab.png';
+import tshirt from './images/Tshirt.jpg';
+import cp_diagram from './images/cp_diagram.png';
+import robot_demo from './images/robot_demo.mp4';
 
-function Master() {
-    
+function UPenn() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Box container sx={{mt:10, mb:10}}>
-          <Box size={8}>
+      <Container maxWidth="xl">
+        <Grid container columnSpacing={3} sx={{mt:12, alignItems:"center"}}>
+          <Grid size={2} align="center">
+            <Box component="img" src={logo} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={10}>
             <Typography variant="h2" align="left">
-              MAP IV
+              Master at Nagoya University
             </Typography>
-            <Typography variant="h4" align="left">
-              Tech startup company that originated at Nagoya University.
+            <Typography variant="h5" align="left">
+              Graduate School of Informatics, Department of Intelligent Systems, Takeda Lab.
             </Typography>
-          </Box>
-          <Box size={8}>
-            <Box component="img" src={map_iv} sx={{width:"99%", borderRadius:3}}/>
-          </Box>
-        </Box>
-        <Stack>
-          <Typography variant="body1" align="left">
-            Part-time engineer at MAP IV. MAP IV is an software powered company working for 3D map, HDMap, localization software, and hardware stack for localization and mapping. The main custromers are roboticcs company for navigation and manufacturing, transportation company for warehouse maintainance. 
-          </Typography>
-          <Typography variant="body1" align="left">
-            I worked at 3D spatial data team. This team integrate technology developed in the other team and creates high quality HDMap and 3D map model. Our engineering goal is developing automation tools, map creation tools with sophisticated UI with highly experienced labeling members. I worked on two projects; assist tools for 3D map model creation and HD map (intermediate format featuring comprehensive and detailed definition or road elements). 
-            "3D map model creation" optimizes redundant workflow in managing tasks of the 3D map modeling and quality assessment tasks. The project included a investigation of the entire 3D modeling workflow, development of python scripts to extract and organize modeling data (PCD), and development of Blender extensions to perform quality assessment. 
-            "HD map" is adding supported objects the map can represent. In addition to adding functions, I carried out a complete flow of software development in industry, including implementation of test scripts using ctest and pytest, format organization using clang and black, and automated evaluation on github CI/CD. 
-          </Typography>
+          </Grid>
+        </Grid>
 
-        </Stack>
+        <Typography variant="h3" align="left" sx={{mt: 6}}>
+          About Takeda Lab.
+        </Typography>
+        <Divider/>
+        <Typography variant="h6" align="left" sx={{mt: 3}}>
+          Takeda Lab specializes in behavior signal processing, conducting research in variety of fields, including sound processing, automated driving, human-machine interaction, and sports analysis.
+          Despite the diversity of these research areas, they are all interconnected through the common theme of <b>behavior signal processing</b>. Students with different research interests actively engage in discussions and collaborate on their research daily. 
+          The laboratory is also highly international, with many international students from conutries such as Egypt, Thailand, Canada, India, China, the Philippines, Turkey, Spain, Norway, and Finland. Student interactions are vibrant, providing an environment where researchers from diverse backgrounds can learn from one another and deepen their research.
+        </Typography>
+        <Grid container direction="row" columnSpacing={2} sx={{mt:3}}>
+          <Grid size={7.43}>
+            <Box component="img" src={lab_member} sx={{width:"99%", borderRadius:3}}/>
+            <Typography variant="body1" align="center" p={2}>
+              Lab mates, professors, Research assistants
+            </Typography>
+          </Grid>
+          <Grid size={4.57}>
+            <Box component="img" src={tshirt} sx={{width:"99%", borderRadius:3}}/>
+            <Typography variant="body1" align="center" p={2}>
+              Snapshot of graduation party
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Typography variant="h3" align="left" sx={{mt:6}}>
+          Research
+        </Typography>
+        <Divider/>
+        <Typography variant="h6" align="left" sx={{mt:3}}>
+          My research theme during the master degree focused on <b> user interface for human intervention in the perception of automated driving system </b>. This is a novel approach as an alternative to conventional control takeover method, sharing internal perception state with human operator and allowing the human operator to check and correct mistakes in the perception errors. By intervening at an early stage of automated driving system, this approach aims to stabilize the driving behavior while human interventions.
+        </Typography>
+
+        <Box sx={{mt:3}}>
+          <Box component="img" src={cp_diagram} sx={{width:"70%", borderRadius:3}}/>
+          <Typography variant="body1" align="center" p={2}>
+            Diagram of "intervention in the perception of automated driving system"
+          </Typography>
+        </Box>
+        <Typography variant="h6" align="left" sx={{mt: 3}}>
+          My research primarily focused on verifying technical feasibility. I conducted both demonstrations using a small mobile robot and subject experiments in a simulation environment. For the small mobile robot experiment, I implemented a prototype user interface using Autoware, demonstrating that human intervention is possible at the perception stage of the automated systems. The subject experiments were conducted using CARLA, an open-source simulator, where I integrated Autoware and the user interface. By involving participants in driving evaluations, I assessed the driving behavior during human intervention.
+        </Typography>
+        <Box sx={{mt: 3}}>
+          <video src={robot_demo} autoPlay loop muted style={{width: "90%", height: "auto"}}/>
+          <Typography variant="body1" align="center" p={2}>
+            Student teams developing automated driving using go cart vehicles and Autoware
+          </Typography>
+        </Box>
+
       </Container>
     </React.Fragment>
   );
 }
-
-export default Master;
+export default UPenn;

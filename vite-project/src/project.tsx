@@ -4,9 +4,13 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid2';
-import Stack from '@mui/material/Stack';
-import Carousel from 'react-bootstrap/Carousel';
-import Image from 'react-bootstrap/Image';
+import Divider from '@mui/material/Divider';
+
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardMedia from '@mui/material/CardMedia';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
 
 // keyboard
 import moire1 from './images/moire1.jpg';
@@ -24,207 +28,191 @@ import thinkpad from './images/thinkpad_reg.jpg';
 import tshirt from './images/Tshirt.jpg';
 
 function Project() {
-  const KeyboardContent = (
-    <Container maxWidth="lg">
-      <Typography variant="h4">
-        Mechanical Keyboard
-      </Typography>
-      <Typography variant="body1">
-        I am designing the ideal keyboard.
-        Features,
-        <ul>
-          <li>A new layout that provides a natural home position and reduced fingering</li>
-          <li>Key mapping optimized for Vim use</li>
-          <li>Split design to reduce the physical workload</li>
-          <li>Symmetrical key layout as a result of pursuit of functionality and aesthetically pleasing appearance as a side effect</li>
-        </ul>
-        PCB was designed from scratch by CAD and ordered to JLCPCB.
-        The case was designed by CAD and produced by my own 3D printer.
-        The firmware is based on QMK.
-
-        Various devices such as rotary encoder, trackball, LCD, etc. are embedded and tested. I'm planing to work on packaging design aiming to make it in production.
-      </Typography>
-    </Container>
-  );
-  const HDMapContent = (
-    <Container maxWidth="lg">
-      <Typography variant="h4">
-        HDMap editor
-      </Typography>
-      <Typography variant="body1">
-          A tool to edit HDMap (maps) and Waypoint (vehicle paths) used in automated driving with Reviz in ROS. Developed for fine-tuning on site during demonstrations. Developed based on InteractiveMarker and Qt.
-      </Typography>
-    </Container>
-  );
-  const CarlaContent = (
-    <Container maxWidth="lg">
-      <Typography variant="h4">
-        Driving scenario creation tool
-      </Typography>
-      <Typography variant="body1">
-          A driving scenario creation tool for defining arbitrary behaviors of surrounding vehicles and pedestrians for automated driving experiments in the Carla simulator. In short, this is an xml wrapper for Carla PythonAPI. Conventionally, it was necessary to create driving scenarios using PythonAPI or ScenarioRunner provided by Carla, and it was difficult to create a large number of scenarios on one's own. By simply defining the position of other vehicles, their travel routes, and the timing of firing their movement in interpretable xml, driving scenarios can be easily created and executed. A variety of action modes and visualization tools were also created.
-      </Typography>
-    </Container>
-  );
-
-  const PrinterContent = (
-    <Container maxWidth="lg">
-      <Typography variant="h4">
-        Enjoy 3D printing!
-      </Typography>
-      <Typography variant="body1">
-        Repairs broken parts and creates original products using 3D printer (both FFF and SLA).
-      </Typography>
-    </Container>
-  );
-
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Box sx={{ p:2, flexgrow: 1 }}>
-          <div className="mt-3"/>
-          <Typography variant="h3">Personal Projects</Typography>
-        </Box>
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'flex', md: 'none'}}} >
-          <Stack spacing={2}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={moire1} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={moire2} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={tsubasa1} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={tsubasa2} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={cdd} fluid />
-                </Carousel.Item>
-              </Carousel>
-              {KeyboardContent}
-          </Stack>
-        </Box>
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'none', md: 'flex'}}} >
-          <Grid container spacing={2}>
-            <Grid size={6}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={moire1} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={moire2} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={tsubasa1} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={tsubasa2} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={cdd} fluid />
-                </Carousel.Item>
-              </Carousel>
-            </Grid>
-            <Grid size={6}>
-              {KeyboardContent}
-            </Grid>
-          </Grid>
-        </Box>
+      <Container maxWidth="xl">
+        <Typography variant="h2" sx={{mt:15, mb:10}} align="left">
+          Personal Projects
+        </Typography>
 
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'flex', md: 'none'}}} >
-          <Stack spacing={2}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={hdmap} fluid />
-                </Carousel.Item>
-              </Carousel>
-              {HDMapContent}
-          </Stack>
-        </Box>
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'none', md: 'flex'}}} >
-          <Grid container spacing={2}>
-            <Grid size={6}>
-              {HDMapContent}
-            </Grid>
-            <Grid size={6}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={hdmap} fluid />
-                </Carousel.Item>
-              </Carousel>
-            </Grid>
+        <Typography variant="h4" align="left">
+          Hardware Projects
+        </Typography>
+        <Divider/>
+        <Grid container columnSpacing={3} rowSpacing={3} sx={{justifyContent: "center", mt:3}}>
+          <Grid>
+            <Card sx={{display: 'flex', width: 240, height: 330}}>
+              <CardActionArea href='#/project/keyboard'>
+                <CardMedia component="img" sx={{height:150}} image={moire1}/>
+                <CardContent>
+                  <Typography variant="h6" align="center">
+                    Mechanical Keyboard
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    I'm designing my dream keyboard
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           </Grid>
-        </Box>
 
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'flex', md: 'none'}}} >
-          <Stack spacing={2}>
-            <video src={carla_scenario} autoPlay loop muted style={{width: 750, height: "auto"}}/>
-            {CarlaContent}
-          </Stack>
-        </Box>
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'none', md: 'flex'}}} >
-          <Grid container spacing={2}>
-            <Grid size={6}>
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', lg:'none' } }}>
-                <video src={carla_scenario} autoPlay loop muted style={{width: 200, height: "auto"}}/>
-              </Box>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', lg:'none' } }}>
-                <video src={carla_scenario} autoPlay loop muted style={{width: 400, height: "auto"}}/>
-              </Box>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'none', lg: 'flex' } }}>
-                <video src={carla_scenario} autoPlay loop muted style={{width: 550, height: "auto"}}/>
-              </Box>
-            </Grid>
-            <Grid size={6}>
-              {CarlaContent}
-            </Grid>
+          <Grid>
+            <Card sx={{display: 'flex', width: 240, height: 330}}>
+              <CardActionArea href='#/project/mouse'>
+                <CardMedia component="img" sx={{height:150}} image={mouse}/>
+                <CardContent>
+                  <Typography variant="h6" align="center">
+                    Custom Mouse 
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    I'm designing my dream mouse
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           </Grid>
-        </Box>
 
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'flex', md: 'none'}}} >
-          <Stack spacing={2}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={tshirt} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={mouse} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={thinkpad} fluid />
-                </Carousel.Item>
-              </Carousel>
-              {PrinterContent}
-          </Stack>
-        </Box>
-        <Box sx={{ p:2, flexgrow: 1, display: { xs: 'none', md: 'flex'}}} >
-          <Grid container spacing={2}>
-            <Grid size={6}>
-              {PrinterContent}
-            </Grid>
-            <Grid size={6}>
-              <Carousel>
-                <Carousel.Item>
-                  <Image src={tshirt} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={mouse} fluid />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <Image src={thinkpad} fluid />
-                </Carousel.Item>
-              </Carousel>
-            </Grid>
+          <Grid>
+            <Card sx={{display: 'flex', width: 240, height: 330}}>
+              <CardActionArea href='#/project/repair'>
+                <CardMedia component="img" sx={{height:150}} image={thinkpad}/>
+                <CardContent>
+                  <Typography variant="h6" align="center">
+                    Repairment parts 
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    Repairs broken parts and creates original products using 3D printer (both FFF and SLA).
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           </Grid>
-        </Box>
+
+        </Grid>
+
+        <Typography variant="h4" sx={{mt:10}} align="left">
+          Software Projects
+        </Typography>
+        <Divider/>
+        <Grid container columnSpacing={3} rowSpacing={3} sx={{justifyContent: "center", mt:3, mb:10}}>
+          <Grid>
+            <Card sx={{display: 'flex', width: 240, height: 330}}>
+              <CardActionArea href="https://github.com/kuriatsu/rviz_hdmap_editor">
+                <CardMedia component="img" sx={{height:150}} image={hdmap}/>
+                <CardContent>
+                  <Typography variant="h6" align="center">
+                    HDMap Editor 
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    HDMap (maps) and Waypoint (vehicle paths) editor on RViz.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+
+          <Grid>
+            <Card sx={{display: 'flex', width: 240, height: 330}}>
+              <CardActionArea href="https://github.com/kuriatsu/carla-scenario">
+                <CardMedia component="img" sx={{height:150}} image="https://user-images.githubusercontent.com/38074802/195296981-5ac8c0a4-b225-43a9-8c57-ed863bca9c3f.gif"/>
+                <CardContent>
+                  <Typography variant="h6" align="center">
+                    Driving Scenario Editor
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    An xml wrapper of CARLA PythonAPI, defines the position of vehicles, travel routes, and the trigger of firing their motion. Run scenario, action presets, and visualization tools.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+
+          <Grid>
+            <Card sx={{display: 'flex', width: 240, height: 330}}>
+              <CardActionArea href="https://github.com/kuriatsu/ros-g29-force-feedback">
+                <CardMedia component="img" sx={{height:150}} image="https://github.com/kuriatsu/ros-g29-force-feedback/raw/image/images/force_feedback_test.gif"/>
+                <CardContent>
+                  <Typography variant="h6" align="center">
+                    G29 ROS control 
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    Control G29 and G923 wheel using FF functionality.  
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+
+        </Grid>
       </Container>
     </React.Fragment>
   );
 }
 
+function Keyboard() {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Typography variant="h2" align="left" sx={{mt:15, mb:10}}>
+          Mechanical Keyboard
+        </Typography>
+        <Grid container columnSpacing={1}>
+          <Grid size={4}>
+            <Box component="img" src={tsubasa1} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={4}>
+            <Box component="img" src={tsubasa2} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={4}>
+            <Box component="img" src={moire1} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={4}>
+            <Box component="img" src={moire2} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={4}>
+            <Box component="img" src={cdd} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+        </Grid>
+        <Typography variant="h6" align="left" sx={{mt:3}}>
+          I am designing the ideal keyboard.
+          Features,
+          <ul>
+            <li>A new layout that provides a natural home position and reduced fingering</li>
+            <li>Key mapping optimized for Vim use</li>
+            <li>Split design to reduce the physical workload</li>
+            <li>Symmetrical key layout as a result of pursuit of functionality and aesthetically pleasing appearance as a side effect</li>
+          </ul>
+          PCB was designed from scratch by CAD and ordered to JLCPCB.
+          The case was designed by CAD and produced by my own 3D printer.
+          The firmware is based on QMK.
 
-export default Project;
+          Various devices such as rotary encoder, trackball, LCD, etc. are embedded and tested. I'm planing to work on packaging design aiming to make it in production.
+        </Typography>
+      </Container>
+    </React.Fragment>
+  );
+}
+
+function Mouse() {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container>
+      </Container>
+    </React.Fragment>
+  );
+}
+
+function Repair() {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container>
+      </Container>
+    </React.Fragment>
+  );
+}
+
+export default {Project, Keyboard, Mouse, Repair}

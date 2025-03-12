@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 
 import * as React from 'react';
 import { HashRouter as Router, Route, Link, Routes } from 'react-router-dom';
@@ -191,7 +189,22 @@ function App() {
         }/>
         <Route path="/project" element={
           <React.Fragment>
-            <Project />
+            <Project.Project />
+          </React.Fragment>
+        }/>
+        <Route path="/project/keyboard" element={
+          <React.Fragment>
+            <Project.Keyboard />
+          </React.Fragment>
+        }/>
+        <Route path="/project/mouse" element={
+          <React.Fragment>
+            <Project.Mouse />
+          </React.Fragment>
+        }/>
+        <Route path="/project/repair" element={
+          <React.Fragment>
+            <Project.Repair />
           </React.Fragment>
         }/>
         <Route path="/hobby" element={

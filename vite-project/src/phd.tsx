@@ -9,6 +9,8 @@ import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
 import {useState, useEffect} from "react";
 
+import logo from './images/nagoya-univ_logo.png'
+
 import cp_chill from './images/driver_chill.png';
 import cp_request from './images/request.png';
 import cp_share from './images/share.png';
@@ -95,14 +97,27 @@ function PhD() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="xl">
-        <Box sx={{mt:15}}>
-          <Typography variant="h2" align="left">
-            Ph.D. Research: 
-          </Typography>
-          <Typography variant="h2" align="left">
-            Human-Machine Cooperation in Perception of Automated Driving System
-          </Typography>
-        </Box>
+        <Grid container columnSpacing={3} sx={{mt:12, alignItems:"center"}}>
+          <Grid size={2} align="center">
+            <Box component="img" src={logo} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={10}>
+            <Typography variant="h2" align="left">
+              Ph.D. at Nagoya University
+            </Typography>
+            <Typography variant="h5" align="left">
+              Graduate School of Informatics, Department of Intelligent Systems, Takeda Lab.
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Typography variant="h3" align="center" sx={{mt:10}}>
+          Research Theme
+        </Typography>
+        <Divider />
+        <Typography variant="h3" align="center" sx={{mt:3}}>
+          Human-Machine Cooperation in Perception of Automated Driving System
+        </Typography>
 
         <Typography variant="h3" align="left" sx={{mt:10}}>
           Motivation
@@ -285,6 +300,9 @@ function PhD() {
             </Grid>
             <Grid size={6}>
               <Box component="img" src={pie_result} sx={{mt:3, width:"90%"}}/>
+              <Typography variant="body1" align="center" sx={{mt:2}}>
+                Relationship between intervention time, accuracy, and tasks
+              </Typography>
             </Grid>
           </Grid>
         </Box>
