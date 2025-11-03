@@ -41,11 +41,19 @@ function Hobby() {
           Running 
         </Typography>
         <Divider/>
-        <Box component="img" src={huarache} sx={{mt:3, width:"70%", borderRadius:3}}/>
+        <Grid container direction="row" columnSpacing={2} sx={{mt:3}}>
+          <Grid size={6}>
+            <Box component="img" src={huarache} sx={{width:"99%", borderRadius:3}}/>
+          </Grid>
+          <Grid size={6}>
+            <Box>
+            <iframe height='640' width='400' frameBorder='0' scrolling='yes' src='https://www.strava.com/athletes/44663482/latest-rides/9a18b0789babbbb280df023ff9fd30dc8542e524'></iframe>
+            </Box>
+          </Grid>
+        </Grid>
         <Typography variant="body1" align="center" p={2}>
           I love running with sandal!
         </Typography>
-
         <Typography variant="h3" align="left" sx={{mt:10}}>
           Fixie
         </Typography>
@@ -65,7 +73,7 @@ function Hobby() {
           Not sure about hub and spoke.
           Tire is Continental Gator Skin
         </Typography>
-        <Box component="img" src={mash} sx={{width:"70%", borderRadius:3}}/>
+        <Box component="img" src={mash} sx={{mt:3, width:"70%", borderRadius:3}}/>
         <Typography variant="body1" align="center" p={{mt:2}}>
           In front of MASH SF
         </Typography>
@@ -89,7 +97,7 @@ function Hobby() {
           </Grid>
         </Grid>
         <Box p={3}>
-          <iframe width="1016" height="572" src="https://www.youtube.com/embed/duMhutfB07I" title="名古屋大学陸上競技部2017PV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="1016" height="572" src="https://www.youtube.com/embed/duMhutfB07I" title="名古屋大学陸上競技部2017PV" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           <Typography variant="body1" align="center" p={2}>
             Track&Field club of Nagoya University
           </Typography>
