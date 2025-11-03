@@ -54,7 +54,7 @@ function Intro() {
 function Contact() {
     return (
       <Container>
-        <Typography variant="h2" align="center" sx={{mt:10, mb:5}}>
+        <Typography variant="h4" align="center" sx={{mt:10, mb:5}}>
           Contact
         </Typography>
         <Grid container 
@@ -94,7 +94,7 @@ function Contact() {
             <Grid sx={{ml:2, mr:1}}>
               <PlaceIcon fontSize="large"/>
               <Typography variant="body1" align="center">
-                Nagoya, Aichi, Japan
+                Kashiwa, Chiba, Japan
               </Typography>
             </Grid>
           </Stack>
@@ -102,18 +102,13 @@ function Contact() {
             <Grid sx={{ml:2, mr:1}}>
               <EmailIcon fontSize="large"/> 
               <Typography variant="body1" align="center">
+                kuribayashi.a@t2.auto
+              </Typography>
+              <Typography variant="body1" align="center">
                 kuriatsubayashi712@gmail.com
               </Typography>
               <Typography variant="body1" align="center">
                 kuribayashi.atsushi@g.sp.m.is.nagoya-u.ac.jp
-              </Typography>
-            </Grid>
-          </Stack>
-          <Stack direction="row">
-            <Grid sx={{ml:2, mr:1}}>
-              <PhoneIcon fontSize="large"/>
-              <Typography variant="body1" align="center">
-                +81-80-2565-4481
               </Typography>
             </Grid>
           </Stack>

@@ -28,6 +28,7 @@ import Timeline from './timeline';
 import PhD from './phd';
 import UPenn from './upenn';
 import Master from './master';
+import T2 from './t2';
 import MAPIV from './mapiv';
 import BRAINIV from './brainiv';
 import QTA from './qta';
@@ -157,8 +158,8 @@ function App() {
           <Box sx={{mt:10}}>
           <React.Fragment>
             <Intro.Intro />
-            <Timeline.Academic />
             <Timeline.Work />
+            <Timeline.Academic />
             <Skill />
             <Intro.Contact />
           </React.Fragment>
@@ -207,6 +208,11 @@ function App() {
         <Route path="/master" element={
           <React.Fragment>
             <Master />
+          </React.Fragment>
+        }/>
+        <Route path="/t2" element={
+          <React.Fragment>
+            <T2 />
           </React.Fragment>
         }/>
         <Route path="/mapiv" element={

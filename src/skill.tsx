@@ -25,7 +25,7 @@ function Skill() {
   return (
   <Container maxWidth="lg">
     <Box>
-      <Typography variant="h2" align="center" sx={{mt:10, mb:5}}> Skill </Typography>
+      <Typography variant="h4" align="center" sx={{mt:10, mb:5}}> Skill </Typography>
     </Box>
     <Grid container sx={{justifyContent: "center", alignItems:"stretch"}}>
       <Grid>

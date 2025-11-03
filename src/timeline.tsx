@@ -15,7 +15,7 @@ function Academic() {
   return (
   <Container maxWidth="lg">
     <Box>
-      <Typography variant="h2" align="center" sx={{mt:10, mb:5}}> Academic </Typography>
+      <Typography variant="h4" align="center" sx={{mt:10, mb:5}}> Academic </Typography>
     </Box>
     <Card sx={{display: 'flex', mb:2}}>
       <CardActionArea href='#/phd'>
@@ -98,20 +98,38 @@ function Work() {
   return (
   <Container maxWidth="lg">
     <Box>
-      <Typography variant="h2" align="center" sx={{mt:10, mb:5}}> Work </Typography>
+      <Typography variant="h4" align="center" sx={{mt:10, mb:5}}> Work </Typography>
     </Box>
+
+    <Card sx={{display: 'flex', mb:2}}>
+      <CardActionArea href='#/t2'>
+        <CardContent>
+          <Stack direction="row" spacing={2} >
+            <Chip sx={{minWidth:190, maxWidth:190}} label=" 1 Apl 2025 - Now" />
+            <Box>
+              <Typography variant="h5" align="left">
+                T2
+              </Typography>
+              <Typography variant="body1" align="left">
+                Full-time software engineer at T2, automated driving logistics company, as a member of planning team.
+              </Typography>
+            </Box>
+          </Stack>
+        </CardContent>
+      </CardActionArea>
+    </Card>
 
     <Card sx={{display: 'flex', mb:2}}>
       <CardActionArea href='#/mapiv'>
         <CardContent>
           <Stack direction="row" spacing={2} >
-            <Chip sx={{minWidth:190, maxWidth:190}} label=" 1 Dec 2024 - Now" />
+            <Chip sx={{minWidth:190, maxWidth:190}} label=" 1 Dec 2024 - 30 Mar 2025" />
             <Box>
               <Typography variant="h5" align="left">
-                MapIV
+                MAP IV
               </Typography>
               <Typography variant="body1" align="left">
-                Part-time engineer at MapIV, 3D mapping and localization company. I worked on 3D map creation tool and HD map format.
+                Part-time engineer at MAP IV, 3D mapping and localization company. I worked on 3D map creation tool and HD map format.
               </Typography>
             </Box>
           </Stack>
@@ -144,10 +162,10 @@ function Work() {
             <Chip sx={{minWidth:190, maxWidth:190}} label="1 Apr 2019 - 12 Mar 2024" />
             <Box>
               <Typography variant="h5" align="left">
-                BrainIV
+                BRAIN IV
               </Typography>
               <Typography variant="body1" align="left">
-                Part-time engineer at BrainIV, a child company of TierIV. I worked on AI driving school project and driving scene reconstruction.
+                Part-time engineer at BRAIN IV, a child company of TierIV. I worked on AI driving school project and driving scene reconstruction.
               </Typography>
             </Box>
           </Stack>
